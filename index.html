@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACEYYY | Welcome</title>
+    <style>
+        /* Base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #0a0a2a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Navigation styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            background: rgba(10, 10, 42, 0.8);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .logo span {
+            color: #64f4df;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0;
+        }
+
+        /* Hero section styling */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            opacity: 0;
+        }
+
+        .hero-text {
+            font-size: 22px;
+            max-width: 700px;
+            margin-bottom: 40px;
+            opacity: 0;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #64f4df, #3a86ff);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        /* Stars background */
+        .stars {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            box-shadow: 0 0 3px white;
+            border-radius: 50%;
+        }
+
+        /* Planet styling */
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        #planet1 {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 30% 40%, #ff8366, #e63946);
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
+            right: 15%;
+            top: 15%;
+        }
+
+        #planet2 {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 40%, #64f4df, #00b4d8);
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
+            left: 10%;
+            bottom: 20%;
+        }
+
+        /* Spaceship styling */
+        .spaceship {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            right: -100px;
+            bottom: 15%;
+            opacity: 0;
+        }
+        
+        .sound-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(10, 10, 42, 0.7);
+            border: 2px solid #64f4df;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .second-section {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #0a0a2a, #1a1b4b);
+            padding: 100px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .second-section h2 {
+            font-size: 48px;
+            margin-bottom: 60px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .planet-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .planet-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .planet-info h3 {
+            color: #64f4df;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .planet-info p {
+            color: #fff;
+            line-height: 1.6;
+        }
+                
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="logo">SPACEYYY<span>EXPLORER</span></div>
+        <div class="nav-links">
+            <a href="#" class="nav-item">Home</a>
+            <a href="#" class="nav-item">Explore</a>
+            <a href="#" class="nav-item">Planets</a>
+            <a href="#" class="nav-item">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero">
+
+<svg class="galaxy-background" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;">
+    <defs>
+      <radialGradient id="galaxy-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+        <stop offset="0%" stop-color="#2b3595" />
+        <stop offset="40%" stop-color="#1a1b4b" />
+        <stop offset="100%" stop-color="#0a0a2a" />
+      </radialGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#galaxy-gradient)" />
+
+  </svg>
+        <h1>EXPLORE THE COSMOS</h1>
+        <p class="hero-text">Journey through the stars and discover the wonders of our universe. Ready for an adventure beyond imagination?</p>
+        <button class="cta-button">Start Your Journey</button>
+
+        <!-- Planets -->
+        <div class="planet" id="planet1"></div>
+        <div class="planet" id="planet2"></div>
+        
+        <!-- Spaceship -->
+        <svg class="spaceship" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 25C20 15 35 5 50 5C65 5 80 15 80 25C80 35 65 45 50 45C35 45 20 35 20 25Z" fill="#f1faee" />
+            <path d="M80 25H95C95 25 100 30 95 35C90 40 80 25 80 25Z" fill="#f1faee" />
+            <circle cx="50" cy="25" r="10" fill="#48cae4" />
+            <path d="M20 25H5C5 25 0 20 5 15C10 10 20 25 20 25Z" fill="#f1faee" />
+        </svg>
+    </section>
+  
+    <section class="second-section">
+        <h2>Discover Our Cosmic Wonders</h2>
+        <div class="planet-grid">
+        <div class="planet-info">
+            <h3>Red Giants</h3>
+            <p>Massive stars that expand in their final stages, glowing with a distinctive red hue.</p>
+        </div>
+        <div class="planet-info">
+            <h3>Neutron Stars</h3>
+            <p>The collapsed cores of massive stars, spinning at incredible speeds.</p>
+        </div>
+        <div class="planet-info">
+            <h3>Black Holes</h3>
+            <p>Regions of spacetime where gravity is so strong that nothing can escape, not even light.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        
+        // Loading page
+        window.addEventListener('load', () => {
+            // Create stars
+            createStars();
+            
+            // Start animations
+            animateElements();
+            initParallax();
+            initCursorEffects();
+            createGalaxy();
+            create3DPlanets();
+            createCosmicDust();
+            initAudio();
+            createMouseTrail();
+            initScrollAnimations();
+        });
+        
+
+        // Function to create star elements
+        function createStars() {
+            const hero = document.querySelector('.hero');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('stars');
+                
+                // Random positioning
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                // Random size variation
+                const size = Math.random() * 2 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // Add the star to the hero section
+                hero.appendChild(star);
+            }
+        }
+
+        // Function to handle all animations
+        function animateElements() {
+            // Create a main timeline
+            const mainTimeline = gsap.timeline();
+            
+            // Animate navigation links
+            const navLinks = document.querySelectorAll('.nav-links a');
+            mainTimeline.to(navLinks, {
+                opacity: 1,
+                stagger: 0.2,
+                duration: 0.7,
+                ease: "power2.out"
+            });
+            
+            // Animate stars
+            const stars = document.querySelectorAll('.stars');
+            mainTimeline.to(stars, {
+                opacity: 0.8,
+                scale: 1.2,
+                duration: 1.5,
+                stagger: {
+                    each: 0.01,
+                    from: "random"
+                },
+                ease: "power1.inOut",
+                repeat: -1,
+                yoyo: true
+            }, "-=0.5");
+            
+            // Animate heading text
+            mainTimeline.to('h1', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "back.out(1.7)"
+            }, "-=1");
+            
+            // Animate paragraph text
+            mainTimeline.to('.hero-text', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power2.out"
+            }, "-=0.7");
+            
+            // Animate CTA button
+            mainTimeline.to('.cta-button', {
+                opacity: 1,
+                scale: 1,
+                duration: 0.7,
+                ease: "elastic.out(1, 0.5)"
+            }, "-=0.5");
+            
+            // Animate planets
+            mainTimeline.to('#planet1', {
+                opacity: 1,
+                x: -30,
+                duration: 1.2,
+                ease: "power2.out",
+                onComplete: () => {
+                    
+                    gsap.to('#planet1', {
+                        rotation: 360,
+                        duration: 40,
+                        repeat: -1,
+                        ease: "none"
+                    });
+                }
+            }, "-=0.8");
+            
+            mainTimeline.to('#planet2', {
+                opacity: 1,
+                x: 20,
+                duration: 1.2,
+                ease: "power2.out",
+                onComplete: () => {
+                    gsap.to('#planet2', {
+                        rotation: -360,
+                        duration: 30,
+                        repeat: -1,
+                        ease: "none"
+                    });
+                }
+            }, "-=1");
+            
+            // Animate spaceship
+            mainTimeline.to('.spaceship', {
+                opacity: 1,
+                x: -window.innerWidth - 100,
+                duration: 15,
+                ease: "power1.inOut",
+                repeat: -1,
+                repeatDelay: 2
+            }, "-=0.5");
+            
+            // Create a hover effect for the CTA button
+            const ctaButton = document.querySelector('.cta-button');
+            ctaButton.addEventListener('mouseenter', () => {
+                gsap.to(ctaButton, {
+                    scale: 1.1,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+            });
+            
+            ctaButton.addEventListener('mouseleave', () => {
+                gsap.to(ctaButton, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+            });
+        }
+        
+        function initParallax() {
+        // Create a scroll timeline
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            
+            // Move elements at different rates
+            gsap.to('#planet1', {
+            y: scrollPosition * 0.1,
+            x: -scrollPosition * 0.05,
+            duration: 0.3,
+            ease: "none"
+            });
+            
+            gsap.to('#planet2', {
+            y: -scrollPosition * 0.2,
+            x: scrollPosition * 0.07,
+            duration: 0.3,
+            ease: "none"
+            });
+            
+            gsap.to('.stars', {
+            y: scrollPosition * 0.03,
+            duration: 0.3,
+            ease: "none",
+            stagger: 0.001
+            });
+        });
+        }
+
+        function initCursorEffects() {
+        const hero = document.querySelector('.hero');
+        
+        hero.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            
+            // Affect stars based on cursor position
+            document.querySelectorAll('.stars').forEach(star => {
+            const starX = star.getBoundingClientRect().left + star.offsetWidth / 2;
+            const starY = star.getBoundingClientRect().top + star.offsetHeight / 2;
+            
+            // Calculate distance
+            const distX = mouseX - starX;
+            const distY = mouseY - starY;
+            const distance = Math.sqrt(distX * distX + distY * distY);
+            
+            // Only affect stars within certain range
+            if (distance < 100) {
+                const power = (100 - distance) / 500;
+                
+                gsap.to(star, {
+                x: distX * power,
+                y: distY * power,
+                duration: 1,
+                ease: "power2.out"
+                });
+            } else {
+                // Return to original position
+                gsap.to(star, {
+                x: 0,
+                y: 0,
+                duration: 2,
+                ease: "elastic.out(1, 0.3)"
+                });
+            }
+            });
+        });
+        }
+      
+function createGalaxy() {
+  const galaxySVG = document.querySelector('.galaxy-background');
+  const armCount = 3;
+  const dotsPerArm = 80;
+  
+  for (let arm = 0; arm < armCount; arm++) {
+    for (let i = 0; i < dotsPerArm; i++) {
+      // Logarithmic spiral formula
+      const angle = 0.2 * i + (2 * Math.PI / armCount) * arm;
+      const distance = 5 * Math.pow(1.17, i);
+      const x = 400 + distance * Math.cos(angle);
+      const y = 300 + distance * Math.sin(angle);
+      
+      const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.setAttribute("cx", x);
+      dot.setAttribute("cy", y);
+      dot.setAttribute("r", 1 + Math.random() * 2);
+      dot.setAttribute("fill", `rgba(${200 + Math.random() * 55}, ${200 + Math.random() * 55}, 255, ${0.3 + Math.random() * 0.7})`);
+      dot.setAttribute("class", "galaxy-star");
+      
+      galaxySVG.appendChild(dot);
+    }
+  }
+  
+  // Animate the galaxy rotation
+  gsap.to(".galaxy-background", {
+    rotation: 360,
+    transformOrigin: "center center",
+    duration: 200,
+    repeat: -1,
+    ease: "none"
+  });
+} 
+// Add this after createGalaxy()
+function create3DPlanets() {
+  document.querySelectorAll('.planet').forEach(planet => {
+    planet.addEventListener('mouseover', () => {
+      gsap.to(planet, {
+        rotationY: 360,
+        rotationX: 15,
+        duration: 2.5,
+        ease: "power1.inOut"
+      });
+    });
+    
+    planet.addEventListener('mouseout', () => {
+      gsap.to(planet, {
+        rotationX: 0,
+        duration: 1.5,
+        ease: "elastic.out(1, 0.3)"
+      });
+    });
+  });
+} 
+// Add this after create3DPlanets()
+function createCosmicDust() {
+  const particleCount = 50;
+  const hero = document.querySelector('.hero');
+  
+  // Create particle container
+  const particleContainer = document.createElement('div');
+  particleContainer.className = 'particle-container';
+  particleContainer.style.position = 'absolute';
+  particleContainer.style.width = '100%';
+  particleContainer.style.height = '100%';
+  particleContainer.style.overflow = 'hidden';
+  particleContainer.style.pointerEvents = 'none';
+  hero.appendChild(particleContainer);
+  
+  // Create particles
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'cosmic-particle';
+    particle.style.position = 'absolute';
+    particle.style.width = `${2 + Math.random() * 3}px`;
+    particle.style.height = `${2 + Math.random() * 3}px`;
+    particle.style.background = `rgba(255, 255, 255, ${0.3 + Math.random() * 0.4})`;
+    particle.style.borderRadius = '50%';
+    particle.style.filter = 'blur(1px)';
+    
+    // Random starting position
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100}%`;
+    
+    particleContainer.appendChild(particle);
+    
+    // Animate each particle
+    gsap.to(particle, {
+      x: `${-100 + Math.random() * 200}`,
+      y: `${-100 + Math.random() * 200}`,
+      opacity: Math.random(),
+      duration: 10 + Math.random() * 20,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+  }
+}
+
+function initAudio() {
+  const ambientSound = document.getElementById('ambientSound');
+  const soundToggle = document.getElementById('soundToggle');
+  let soundEnabled = false;
+  
+  // Sound toggle
+  soundToggle.addEventListener('click', () => {
+    if (soundEnabled) {
+      ambientSound.pause();
+      soundToggle.textContent = '🔇';
+    } else {
+      ambientSound.play();
+      soundToggle.textContent = '🔊';
+    }
+    soundEnabled = !soundEnabled;
+  });
+  
+  // Button hover sound
+  document.querySelector('.cta-button').addEventListener('mouseenter', () => {
+    if (soundEnabled) {
+      // Create an oscillator for hover sound (since we don't have actual audio files)
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioCtx.createOscillator();
+      const gainNode = audioCtx.createGain();
+      
+      oscillator.type = 'sine';
+      oscillator.frequency.setValueAtTime(880, audioCtx.currentTime);
+      gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+      
+      oscillator.start();
+      oscillator.stop(audioCtx.currentTime + 0.5);
+    }
+  });
+}
+
+function createMouseTrail() {
+  const hero = document.querySelector('.hero');
+  const trail = document.createElement('div');
+  trail.className = 'mouse-trail';
+  trail.style.position = 'absolute';
+  trail.style.width = '10px';
+  trail.style.height = '10px';
+  trail.style.borderRadius = '50%';
+  trail.style.background = 'radial-gradient(circle, rgba(100, 244, 223, 0.8), rgba(100, 244, 223, 0))';
+  trail.style.pointerEvents = 'none';
+  trail.style.zIndex = '999';
+  trail.style.transform = 'translate(-50%, -50%)';
+  trail.style.opacity = '0';
+  hero.appendChild(trail);
+  
+  hero.addEventListener('mousemove', (e) => {
+    gsap.to(trail, {
+      opacity: 0.7,
+      width: '50px',
+      height: '50px',
+      duration: 0.5
+    });
+    
+    gsap.to(trail, {
+      left: e.clientX,
+      top: e.clientY,
+      duration: 0.2,
+      ease: "power1.out"
+    });
+  });
+  
+  hero.addEventListener('mouseleave', () => {
+    gsap.to(trail, {
+      opacity: 0,
+      duration: 0.5
+    });
+  });
+}
+
+function initScrollAnimations() {
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+  
+  // Create a timeline for the second section
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.second-section',
+      start: 'top 80%',
+      end: 'top 20%',
+      scrub: 1
+    }
+  })
+  .from('.second-section h2', { 
+    y: 100, 
+    opacity: 0,
+    duration: 1 
+  })
+  .from('.planet-info', { 
+    x: -100, 
+    opacity: 0, 
+    stagger: 0.2,
+    duration: 0.8 
+  }, '-=0.5');
+}
+
+    </script>
+
+<audio id="ambientSound" loop>
+    <source src="https://assets.codepen.io/123456/space-ambient.mp3" type="audio/mp3">
+  </audio>
+  <button id="soundToggle" class="sound-toggle">🔊</button>
+</body>
+</html>
